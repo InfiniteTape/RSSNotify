@@ -17,6 +17,8 @@
 		D3D4E81E16D15FB50082C1A9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D4E7FE16D15FB50082C1A9 /* Cocoa.framework */; };
 		D3D4E82616D15FB50082C1A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3D4E82416D15FB50082C1A9 /* InfoPlist.strings */; };
 		D3D4E82916D15FB50082C1A9 /* RSSNotifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E82816D15FB50082C1A9 /* RSSNotifyTests.m */; };
+		D3D4E83816D161470082C1A9 /* RNDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E83616D161460082C1A9 /* RNDemoViewController.m */; };
+		D3D4E83916D161470082C1A9 /* RNDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D4E83716D161470082C1A9 /* RNDemoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		D3D4E82516D15FB50082C1A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D3D4E82716D15FB50082C1A9 /* RSSNotifyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSSNotifyTests.h; sourceTree = "<group>"; };
 		D3D4E82816D15FB50082C1A9 /* RSSNotifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSSNotifyTests.m; sourceTree = "<group>"; };
+		D3D4E83516D161460082C1A9 /* RNDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNDemoViewController.h; sourceTree = "<group>"; };
+		D3D4E83616D161460082C1A9 /* RNDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNDemoViewController.m; sourceTree = "<group>"; };
+		D3D4E83716D161470082C1A9 /* RNDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RNDemoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +121,9 @@
 			children = (
 				D3D4E81016D15FB50082C1A9 /* RNAppDelegate.h */,
 				D3D4E81116D15FB50082C1A9 /* RNAppDelegate.m */,
+				D3D4E83516D161460082C1A9 /* RNDemoViewController.h */,
+				D3D4E83616D161460082C1A9 /* RNDemoViewController.m */,
+				D3D4E83716D161470082C1A9 /* RNDemoViewController.xib */,
 				D3D4E81316D15FB50082C1A9 /* MainMenu.xib */,
 				D3D4E80516D15FB50082C1A9 /* Supporting Files */,
 			);
@@ -228,6 +236,7 @@
 				D3D4E80916D15FB50082C1A9 /* InfoPlist.strings in Resources */,
 				D3D4E80F16D15FB50082C1A9 /* Credits.rtf in Resources */,
 				D3D4E81516D15FB50082C1A9 /* MainMenu.xib in Resources */,
+				D3D4E83916D161470082C1A9 /* RNDemoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +273,7 @@
 			files = (
 				D3D4E80B16D15FB50082C1A9 /* main.m in Sources */,
 				D3D4E81216D15FB50082C1A9 /* RNAppDelegate.m in Sources */,
+				D3D4E83816D161470082C1A9 /* RNDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

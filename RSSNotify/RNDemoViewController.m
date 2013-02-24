@@ -7,8 +7,12 @@
 //
 
 #import "RNDemoViewController.h"
+#import "RNFeedModel.h"
 
 @interface RNDemoViewController ()
+{
+    RNFeedModel *model;
+}
 @end
 
 
@@ -20,7 +24,11 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Initialization code here.
+        model = [[RNFeedModel alloc] init];
+        model.viewController = self;
+        model.feeds = [[NSArray alloc] initWithObjects:
+                       @"http://feeds.feedburner.com/RayWenderlich",
+                       nil];
     }
     
     return self;
@@ -28,7 +36,13 @@
 
 -(IBAction)demoButtonClicked:(id)sender
 {
-    [demoTextView setString:@"Foo"];
+    [demoTextView setString:@""];
+    [model refresh];
+}
+
+-(void)updateText:(NSString *)text
+{
+    [demoTextView setString:[[NSString alloc] initWithString:text]];
 }
 
 @end

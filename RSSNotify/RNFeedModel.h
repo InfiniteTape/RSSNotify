@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RNDemoViewController.h"
 
 @interface RNFeedModel : NSObject
+
+@property (retain) NSOperationQueue *queue;
+@property (retain) NSArray *feeds;
+@property (retain) NSString *text;
+@property (retain) RNDemoViewController *viewController;
+
+- (void)refresh;
 
 @end

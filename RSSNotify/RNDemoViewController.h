@@ -9,11 +9,8 @@
 #import <Cocoa/Cocoa.h>
 
 @interface RNDemoViewController : NSViewController
-{
-    //IBOutlet NSTextView *demoTextView;
-}
 
 @property (nonatomic, retain) IBOutlet NSTextView *demoTextView;
 -(IBAction)demoButtonClicked:(id)sender;
-
+-(void) updateText:(NSString *)text;
 @end

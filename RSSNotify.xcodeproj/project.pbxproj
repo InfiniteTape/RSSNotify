@@ -30,6 +30,9 @@
 		D3D4E82916D15FB50082C1A9 /* RSSNotifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E82816D15FB50082C1A9 /* RSSNotifyTests.m */; };
 		D3D4E83816D161470082C1A9 /* RNDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E83616D161460082C1A9 /* RNDemoViewController.m */; };
 		D3D4E83916D161470082C1A9 /* RNDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D4E83716D161470082C1A9 /* RNDemoViewController.xib */; };
+		D3DA914216DABDB100EC7DD2 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DA914116DABDB100EC7DD2 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D3DA914416DABE2500EC7DD2 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DA914316DABE2500EC7DD2 /* libxml2.dylib */; };
+		D3DA914716DAC06600EC7DD2 /* GDataXMLElement-Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DA914616DAC06600EC7DD2 /* GDataXMLElement-Extras.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,11 @@
 		D3D4E83516D161460082C1A9 /* RNDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNDemoViewController.h; sourceTree = "<group>"; };
 		D3D4E83616D161460082C1A9 /* RNDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNDemoViewController.m; sourceTree = "<group>"; };
 		D3D4E83716D161470082C1A9 /* RNDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RNDemoViewController.xib; sourceTree = "<group>"; };
+		D3DA914016DABDB100EC7DD2 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		D3DA914116DABDB100EC7DD2 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		D3DA914316DABE2500EC7DD2 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		D3DA914516DAC06600EC7DD2 /* GDataXMLElement-Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GDataXMLElement-Extras.h"; sourceTree = "<group>"; };
+		D3DA914616DAC06600EC7DD2 /* GDataXMLElement-Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GDataXMLElement-Extras.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3DA914416DABE2500EC7DD2 /* libxml2.dylib in Frameworks */,
 				D39F0B2516DA76A600C75F96 /* libz.dylib in Frameworks */,
 				D39F0B2316DA769000C75F96 /* CoreServices.framework in Frameworks */,
 				D39F0B1F16DA734500C75F96 /* SystemConfiguration.framework in Frameworks */,
@@ -142,6 +151,7 @@
 		D3D4E7EF16D15FB50082C1A9 = {
 			isa = PBXGroup;
 			children = (
+				D3DA914316DABE2500EC7DD2 /* libxml2.dylib */,
 				D3D4E80416D15FB50082C1A9 /* RSSNotify */,
 				D3D4E82116D15FB50082C1A9 /* RSSNotifyTests */,
 				D3D4E7FD16D15FB50082C1A9 /* Frameworks */,
@@ -185,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				D39F0AFC16DA72CA00C75F96 /* ASIHTTPRequest */,
+				D3DA913F16DABDB100EC7DD2 /* GDataXML */,
 				D3D4E81016D15FB50082C1A9 /* RNAppDelegate.h */,
 				D39F0B2616DA783E00C75F96 /* RNFeedModel.h */,
 				D39F0B2716DA783E00C75F96 /* RNFeedModel.m */,
@@ -227,6 +238,17 @@
 				D3D4E82416D15FB50082C1A9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3DA913F16DABDB100EC7DD2 /* GDataXML */ = {
+			isa = PBXGroup;
+			children = (
+				D3DA914016DABDB100EC7DD2 /* GDataXMLNode.h */,
+				D3DA914116DABDB100EC7DD2 /* GDataXMLNode.m */,
+				D3DA914516DAC06600EC7DD2 /* GDataXMLElement-Extras.h */,
+				D3DA914616DAC06600EC7DD2 /* GDataXMLElement-Extras.m */,
+			);
+			path = GDataXML;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +372,8 @@
 				D39F0B1916DA72CA00C75F96 /* ASIInputStream.m in Sources */,
 				D39F0B1A16DA72CA00C75F96 /* ASINetworkQueue.m in Sources */,
 				D39F0B2816DA783E00C75F96 /* RNFeedModel.m in Sources */,
+				D3DA914216DABDB100EC7DD2 /* GDataXMLNode.m in Sources */,
+				D3DA914716DAC06600EC7DD2 /* GDataXMLElement-Extras.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +490,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSSNotify/RSSNotify-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "RSSNotify/RSSNotify-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -479,6 +504,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSSNotify/RSSNotify-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "RSSNotify/RSSNotify-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";

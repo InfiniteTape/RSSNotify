@@ -36,7 +36,7 @@
 
 - (void)requestFinished:(ASIHTTPRequest *)request
 {
-    text = request.url.absoluteString;
+    text = request.responseString;
     if(viewController)
         [viewController updateText:text];
 }

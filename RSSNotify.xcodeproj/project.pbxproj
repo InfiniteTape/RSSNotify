@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D356DA0216DAFA7C0083C48B /* RNRSSEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = D356DA0116DAFA7C0083C48B /* RNRSSEntry.m */; };
 		D39F0B1416DA72CA00C75F96 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = D39F0B0116DA72CA00C75F96 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D39F0B1516DA72CA00C75F96 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = D39F0B0316DA72CA00C75F96 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D39F0B1616DA72CA00C75F96 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D39F0B0516DA72CA00C75F96 /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D356DA0016DAFA7C0083C48B /* RNRSSEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNRSSEntry.h; sourceTree = "<group>"; };
+		D356DA0116DAFA7C0083C48B /* RNRSSEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNRSSEntry.m; sourceTree = "<group>"; };
 		D39F0AFF16DA72CA00C75F96 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
 		D39F0B0016DA72CA00C75F96 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
 		D39F0B0116DA72CA00C75F96 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
@@ -204,6 +207,8 @@
 				D3D4E83616D161460082C1A9 /* RNDemoViewController.m */,
 				D3D4E83716D161470082C1A9 /* RNDemoViewController.xib */,
 				D3D4E81316D15FB50082C1A9 /* MainMenu.xib */,
+				D356DA0016DAFA7C0083C48B /* RNRSSEntry.h */,
+				D356DA0116DAFA7C0083C48B /* RNRSSEntry.m */,
 				D3D4E80516D15FB50082C1A9 /* Supporting Files */,
 			);
 			path = RSSNotify;
@@ -374,6 +379,7 @@
 				D39F0B2816DA783E00C75F96 /* RNFeedModel.m in Sources */,
 				D3DA914216DABDB100EC7DD2 /* GDataXMLNode.m in Sources */,
 				D3DA914716DAC06600EC7DD2 /* GDataXMLElement-Extras.m in Sources */,
+				D356DA0216DAFA7C0083C48B /* RNRSSEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

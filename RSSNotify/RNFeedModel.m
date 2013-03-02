@@ -123,6 +123,7 @@
             
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 NSMutableString *buildTitles = [[NSMutableString alloc]init];
+                [buildTitles appendFormat:@"%@\n", [NSDate date]];
                 for (RNRSSEntry *entry in entries) {
                     [buildTitles appendFormat:@"%@\n", entry.articleTitle];
                 }

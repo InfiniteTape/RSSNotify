@@ -19,6 +19,7 @@
 
 @implementation RNDemoViewController
 @synthesize demoTextView;
+@synthesize refreshTimeTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,7 +37,18 @@
 
 -(IBAction)demoButtonClicked:(id)sender
 {
-    [demoTextView setString:@""];
+    int timeInt = [refreshTimeTextField intValue];
+    //[demoTextView setString:@""];
+    [self updateFeeds];
+    [NSTimer scheduledTimerWithTimeInterval:timeInt
+                                     target:self
+                                   selector:@selector(updateFeeds)
+                                   userInfo:nil
+                                    repeats:YES];
+}
+
+-(void)updateFeeds
+{
     [model refresh];
 }
 

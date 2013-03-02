@@ -11,6 +11,7 @@
 @interface RNDemoViewController : NSViewController
 
 @property (nonatomic, retain) IBOutlet NSTextView *demoTextView;
+@property (nonatomic, retain) IBOutlet NSTextField *refreshTimeTextField;
 -(IBAction)demoButtonClicked:(id)sender;
 -(void) updateText:(NSString *)text;
 @end

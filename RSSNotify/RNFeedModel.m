@@ -60,12 +60,16 @@
             NSString *articleTitle = [item valueForChild:@"title"];
             NSString *articleUrl = [item valueForChild:@"link"];
             NSString *articleDateString = [item valueForChild:@"pubDate"];
-            NSDate *articleDate = [[NSDate alloc] initWithString:articleDateString];
+            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+            NSLocale *usLocale = [[NSLocale alloc]initWithLocaleIdentifier:@"en_US"];
+            [formatter setLocale:usLocale];
+            [formatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss Z"];
+            //NSDate *articleDate = [[NSDate alloc] initWithString:articleDateString];
             
             RNRSSEntry *entry = [[RNRSSEntry alloc] initWithBlogTitle:blogTitle
                                                       articleTitle:articleTitle
                                                         articleUrl:articleUrl
-                                                       articleDate:articleDate];
+                                                       articleDate:[formatter dateFromString:articleDateString]];
             [entries addObject:entry];
             
         }
@@ -125,7 +129,7 @@
                 NSMutableString *buildTitles = [[NSMutableString alloc]init];
                 [buildTitles appendFormat:@"%@\n", [NSDate date]];
                 for (RNRSSEntry *entry in entries) {
-                    [buildTitles appendFormat:@"%@\n", entry.articleTitle];
+                    [buildTitles appendFormat:@"%@ %@\n", entry.articleTitle, entry.articleDate];
                 }
                 if(viewController)
                     [viewController updateText:buildTitles];

@@ -28,7 +28,7 @@
         model = [[RNFeedModel alloc] init];
         model.viewController = self;
         model.feeds = [[NSArray alloc] initWithObjects:
-                       @"http://feeds.feedburner.com/RayWenderlich",
+                       @"http://feeds.gawker.com/Gizmodo/full",
                        nil];
     }
     

@@ -11,6 +11,7 @@
 #import "ASIHTTPRequest/ASIHTTPRequest.h"
 #import "GDataXML/GDataXMLNode.h"
 #import "GDataXML/GDataXMLElement-Extras.h"
+#import "RNSortedEntries.h"
 
 @implementation RNFeedModel
 
@@ -123,12 +124,20 @@
         else
         {
             NSMutableArray *entries = [NSMutableArray array];
+            RNSortedEntries *sorted = [[RNSortedEntries alloc] initWithMaxSize:5];
             [self parseFeed:doc.rootElement entries:entries];
+            for(RNRSSEntry *entry in entries)
+            {
+                [sorted addEntry:entry];
+            }
             
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 NSMutableString *buildTitles = [[NSMutableString alloc]init];
                 [buildTitles appendFormat:@"%@\n", [NSDate date]];
-                for (RNRSSEntry *entry in entries) {
+                uint i;
+                for(i=0; i<[sorted getMaxSize]; i++)
+                {
+                    RNRSSEntry *entry = [sorted getEntryAtIndex:i];
                     [buildTitles appendFormat:@"%@ %@\n", entry.articleTitle, entry.articleDate];
                 }
                 if(viewController)

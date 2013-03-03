@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D356DA0216DAFA7C0083C48B /* RNRSSEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = D356DA0116DAFA7C0083C48B /* RNRSSEntry.m */; };
+		D367A03616E2E5FF00B1079A /* RNSortedEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = D367A03516E2E5FF00B1079A /* RNSortedEntries.m */; };
 		D39F0B1416DA72CA00C75F96 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = D39F0B0116DA72CA00C75F96 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D39F0B1516DA72CA00C75F96 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = D39F0B0316DA72CA00C75F96 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D39F0B1616DA72CA00C75F96 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D39F0B0516DA72CA00C75F96 /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -49,6 +50,8 @@
 /* Begin PBXFileReference section */
 		D356DA0016DAFA7C0083C48B /* RNRSSEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNRSSEntry.h; sourceTree = "<group>"; };
 		D356DA0116DAFA7C0083C48B /* RNRSSEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNRSSEntry.m; sourceTree = "<group>"; };
+		D367A03416E2E5FF00B1079A /* RNSortedEntries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSortedEntries.h; sourceTree = "<group>"; };
+		D367A03516E2E5FF00B1079A /* RNSortedEntries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSortedEntries.m; sourceTree = "<group>"; };
 		D39F0AFF16DA72CA00C75F96 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
 		D39F0B0016DA72CA00C75F96 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
 		D39F0B0116DA72CA00C75F96 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
@@ -154,7 +157,6 @@
 		D3D4E7EF16D15FB50082C1A9 = {
 			isa = PBXGroup;
 			children = (
-				D3DA914316DABE2500EC7DD2 /* libxml2.dylib */,
 				D3D4E80416D15FB50082C1A9 /* RSSNotify */,
 				D3D4E82116D15FB50082C1A9 /* RSSNotifyTests */,
 				D3D4E7FD16D15FB50082C1A9 /* Frameworks */,
@@ -174,6 +176,7 @@
 		D3D4E7FD16D15FB50082C1A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3DA914316DABE2500EC7DD2 /* libxml2.dylib */,
 				D39F0B2416DA76A600C75F96 /* libz.dylib */,
 				D39F0B2216DA769000C75F96 /* CoreServices.framework */,
 				D39F0B1E16DA734500C75F96 /* SystemConfiguration.framework */,
@@ -209,6 +212,8 @@
 				D3D4E81316D15FB50082C1A9 /* MainMenu.xib */,
 				D356DA0016DAFA7C0083C48B /* RNRSSEntry.h */,
 				D356DA0116DAFA7C0083C48B /* RNRSSEntry.m */,
+				D367A03416E2E5FF00B1079A /* RNSortedEntries.h */,
+				D367A03516E2E5FF00B1079A /* RNSortedEntries.m */,
 				D3D4E80516D15FB50082C1A9 /* Supporting Files */,
 			);
 			path = RSSNotify;
@@ -380,6 +385,7 @@
 				D3DA914216DABDB100EC7DD2 /* GDataXMLNode.m in Sources */,
 				D3DA914716DAC06600EC7DD2 /* GDataXMLElement-Extras.m in Sources */,
 				D356DA0216DAFA7C0083C48B /* RNRSSEntry.m in Sources */,
+				D367A03616E2E5FF00B1079A /* RNSortedEntries.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

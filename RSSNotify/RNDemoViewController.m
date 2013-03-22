@@ -14,14 +14,15 @@
 {
     RNFeedModel *model;
     RNSettings *settings;
+    NSTimer *refreshTimer;
 }
 @end
 
-
-
 @implementation RNDemoViewController
+
 @synthesize demoTextView;
 @synthesize refreshTimeTextField;
+@synthesize demoButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,10 +30,7 @@
     if (self) {
         model = [[RNFeedModel alloc] init];
         model.viewController = self;
-        settings = [[RNSettings alloc] init];
-        [settings load];
-        model.feeds = settings.feedList;
-        model.maxEntries = settings.maxEntries;
+        [self loadSettings];
     }
     
     return self;
@@ -43,16 +41,29 @@
     refreshTimeTextField.integerValue = settings.refreshTime;
 }
 
+-(void)loadSettings {
+    settings = [[RNSettings alloc] init];
+    [settings load];
+    // Temporary feed list until the settings dialog is off the ground
+    if([settings.feedList count] == 0) {
+        [settings.feedList addObject:@"http://feeds.gawker.com/Gizmodo/full"];
+    }
+    model.feeds = settings.feedList;
+    model.maxEntries = settings.maxEntries;
+}
+
 -(IBAction)demoButtonClicked:(id)sender
 {
     int timeInt = [refreshTimeTextField intValue];
     //[demoTextView setString:@""];
     [self updateFeeds];
-    [NSTimer scheduledTimerWithTimeInterval:timeInt
-                                     target:self
-                                   selector:@selector(updateFeeds)
-                                   userInfo:nil
-                                    repeats:YES];
+    refreshTimer = [NSTimer scheduledTimerWithTimeInterval:timeInt
+                                                    target:self
+                                                  selector:@selector(updateFeeds)
+                                                  userInfo:nil
+                                                   repeats:YES];
+    if(refreshTimer)
+        [demoButton setEnabled:NO];
 }
 
 -(void)updateFeeds

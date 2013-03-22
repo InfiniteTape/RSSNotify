@@ -12,6 +12,7 @@
 
 @property (nonatomic, retain) IBOutlet NSTextView *demoTextView;
 @property (nonatomic, retain) IBOutlet NSTextField *refreshTimeTextField;
+@property (nonatomic, retain) IBOutlet NSButton *demoButton;
 -(IBAction)demoButtonClicked:(id)sender;
 -(void) updateText:(NSString *)text;
 @end

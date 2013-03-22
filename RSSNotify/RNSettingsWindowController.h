@@ -13,4 +13,5 @@
 @property (weak) IBOutlet NSTextField *refreshTimeTextField;
 - (IBAction)okButtonPressed:(id)sender;
 @property (weak) IBOutlet NSTextField *maxEntriesTextField;
+- (IBAction)cancelButtonClicked:(id)sender;
 @end

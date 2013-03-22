@@ -67,7 +67,9 @@
 
 -(id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     return [_feedList objectAtIndex:row];
-//    return nil;
 }
 
+- (IBAction)cancelButtonClicked:(id)sender {
+    [[NSApplication sharedApplication] stopModalWithCode:0];
+}
 @end

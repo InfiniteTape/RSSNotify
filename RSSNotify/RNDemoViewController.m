@@ -48,14 +48,14 @@
     // Temporary feed list until the settings dialog is off the ground
     if([settings.feedList count] == 0) {
         [settings.feedList addObject:@"http://feeds.gawker.com/Gizmodo/full"];
-        [settings.feedList addObject:@"http://feeds.gawker.com/Kotaku/full"];
+        //[settings.feedList addObject:@"http://feeds.gawker.com/Kotaku/full"];
     }
     // TODO: once the refresh time comes only from the settings, just call updateFeeds... here.
     model.feeds = settings.feedList;
     model.maxEntries = settings.maxEntries;
 }
 
--(void)updateFeeds:(NSArray *)feedList
+-(void)reloadFeeds:(NSArray *)feedList
            andTime:(NSInteger)refreshTime
             andMax:(NSInteger)maxInteger {
     model.feeds = feedList;
@@ -88,7 +88,7 @@
         [self loadSettings];
     }
     else {
-        [self updateFeeds:model.feeds
+        [self reloadFeeds:[settingsWindow.feedList copy]
                   andTime:settingsWindow.refreshTimeTextField.integerValue
                    andMax:settingsWindow.maxEntriesTextField.integerValue];
     }
@@ -102,7 +102,7 @@
 
 -(void)updateText:(NSString *)text
 {
-    [demoTextView setString:[[NSString alloc] initWithString:text]];
+    [demoTextView setString:[[NSString alloc] initWithFormat:@"%@\n%@", demoTextView.string, text]];
 }
 
 @end

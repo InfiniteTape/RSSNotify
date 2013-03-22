@@ -29,13 +29,9 @@
     if (self) {
         model = [[RNFeedModel alloc] init];
         model.viewController = self;
-        //model.feeds = [[NSArray alloc] initWithObjects:
-        //               @"http://feeds.gawker.com/Gizmodo/full",
-        //               nil];
         settings = [[RNSettings alloc] init];
         [settings load];
         model.feeds = settings.feedList;
-        
         model.maxEntries = settings.maxEntries;
     }
     

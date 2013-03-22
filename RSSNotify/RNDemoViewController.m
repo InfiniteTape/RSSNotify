@@ -35,11 +35,16 @@
         settings = [[RNSettings alloc] init];
         [settings load];
         model.feeds = settings.feedList;
-        refreshTimeTextField.integerValue = settings.refreshTime;
+        
         model.maxEntries = settings.maxEntries;
     }
     
     return self;
+}
+
+- (void)loadView {
+    [super loadView];
+    refreshTimeTextField.integerValue = settings.refreshTime;
 }
 
 -(IBAction)demoButtonClicked:(id)sender

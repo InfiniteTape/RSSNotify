@@ -9,5 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 @interface RNSettingsWindowController : NSWindowController <NSWindowDelegate>
-
+@property (weak) IBOutlet NSTextField *refreshTimeTextField;
+- (IBAction)okButtonPressed:(id)sender;
+@property (weak) IBOutlet NSTextField *maxEntriesTextField;
 @end

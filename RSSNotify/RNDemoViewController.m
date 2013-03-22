@@ -49,7 +49,16 @@
     if([settings.feedList count] == 0) {
         [settings.feedList addObject:@"http://feeds.gawker.com/Gizmodo/full"];
     }
+    // TODO: once the refresh time comes only from the settings, just call updateFeeds... here.
     model.feeds = settings.feedList;
+    model.maxEntries = settings.maxEntries;
+}
+
+-(void)updateFeeds:(NSArray *)feedList
+           andTime:(NSInteger)refreshTime
+            andMax:(NSInteger)maxInteger {
+    model.feeds = feedList;
+    refreshTimeTextField.integerValue = refreshTime;
     model.maxEntries = settings.maxEntries;
 }
 
@@ -68,9 +77,18 @@
 }
 
 - (IBAction)settingsButtonClicked:(id)sender {
-    NSWindowController *settingsWindow = [[RNSettingsWindowController alloc] initWithWindowNibName:@"RNSettingsWindowController"];
+    RNSettingsWindowController *settingsWindow = [[RNSettingsWindowController alloc] initWithWindowNibName:@"RNSettingsWindowController"];
     NSModalSession session = [[NSApplication sharedApplication] beginModalSessionForWindow: settingsWindow.window];
+    [settingsWindow.refreshTimeTextField setIntegerValue:self.refreshTimeTextField.integerValue];
     NSInteger result = [[NSApplication sharedApplication]runModalForWindow:settingsWindow.window];
+    if(!result) {
+        [self loadSettings];
+    }
+    else {
+        [self updateFeeds:model.feeds
+                  andTime:settingsWindow.refreshTimeTextField.integerValue
+                   andMax:settingsWindow.maxEntriesTextField.integerValue];
+    }
     [[NSApplication sharedApplication] endModalSession:session];
 }
 

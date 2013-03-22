@@ -39,4 +39,7 @@
     return YES;
 }
 
+- (IBAction)okButtonPressed:(id)sender {
+    [[NSApplication sharedApplication] stopModalWithCode:1];
+}
 @end

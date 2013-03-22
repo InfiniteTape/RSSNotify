@@ -9,6 +9,7 @@
 #import "RNDemoViewController.h"
 #import "RNFeedModel.h"
 #import "RNSettings.h"
+#import "RNSettingsWindowController.h"
 
 @interface RNDemoViewController ()
 {
@@ -64,6 +65,13 @@
                                                    repeats:YES];
     if(refreshTimer)
         [demoButton setEnabled:NO];
+}
+
+- (IBAction)settingsButtonClicked:(id)sender {
+    NSWindowController *settingsWindow = [[RNSettingsWindowController alloc] initWithWindowNibName:@"RNSettingsWindowController"];
+    NSModalSession session = [[NSApplication sharedApplication] beginModalSessionForWindow: settingsWindow.window];
+    NSInteger result = [[NSApplication sharedApplication]runModalForWindow:settingsWindow.window];
+    [[NSApplication sharedApplication] endModalSession:session];
 }
 
 -(void)updateFeeds

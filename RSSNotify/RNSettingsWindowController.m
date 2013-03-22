@@ -42,4 +42,32 @@
 - (IBAction)okButtonPressed:(id)sender {
     [[NSApplication sharedApplication] stopModalWithCode:1];
 }
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    return _feedList.count;
+}
+
+- (NSView *)tableView:(NSTableView *)tableView
+   viewForTableColumn:(NSTableColumn *)tableColumn
+                  row:(NSInteger)row {
+    
+    // get an existing cell with the MyView identifier if it exists
+    NSTableCellView *result = [tableView makeViewWithIdentifier:@"feedCell" owner:self];
+    
+    // There is no existing cell to reuse so we will create a new one
+    if (result == nil) {
+        result = [[NSTableCellView alloc] init];
+        result.identifier = @"feedCell";
+    }
+    result.textField.stringValue = [_feedList objectAtIndex:row];
+    // return the result.
+    return result;
+    
+}
+
+-(id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    return [_feedList objectAtIndex:row];
+//    return nil;
+}
+
 @end

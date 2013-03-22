@@ -8,7 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface RNSettingsWindowController : NSWindowController <NSWindowDelegate>
+@interface RNSettingsWindowController : NSWindowController <NSWindowDelegate, NSTableViewDataSource, NSTableViewDelegate>
+@property (strong, atomic) NSArray *feedList;
 @property (weak) IBOutlet NSTextField *refreshTimeTextField;
 - (IBAction)okButtonPressed:(id)sender;
 @property (weak) IBOutlet NSTextField *maxEntriesTextField;

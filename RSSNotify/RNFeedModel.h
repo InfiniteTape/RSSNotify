@@ -15,6 +15,7 @@
 @property (retain) NSArray *feeds;
 @property (retain) NSString *text;
 @property (retain) RNDemoViewController *viewController;
+@property NSUInteger maxEntries;
 
 - (void)refresh;
 

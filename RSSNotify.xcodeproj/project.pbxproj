@@ -20,6 +20,7 @@
 		D39F0B2316DA769000C75F96 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39F0B2216DA769000C75F96 /* CoreServices.framework */; };
 		D39F0B2516DA76A600C75F96 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D39F0B2416DA76A600C75F96 /* libz.dylib */; };
 		D39F0B2816DA783E00C75F96 /* RNFeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D39F0B2716DA783E00C75F96 /* RNFeedModel.m */; };
+		D3A8675B16FC8AC600BE3B96 /* RNSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8675A16FC8AC600BE3B96 /* RNSettings.m */; };
 		D3D4E7FF16D15FB50082C1A9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D4E7FE16D15FB50082C1A9 /* Cocoa.framework */; };
 		D3D4E80916D15FB50082C1A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3D4E80716D15FB50082C1A9 /* InfoPlist.strings */; };
 		D3D4E80B16D15FB50082C1A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E80A16D15FB50082C1A9 /* main.m */; };
@@ -75,6 +76,8 @@
 		D39F0B2416DA76A600C75F96 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		D39F0B2616DA783E00C75F96 /* RNFeedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNFeedModel.h; sourceTree = "<group>"; };
 		D39F0B2716DA783E00C75F96 /* RNFeedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNFeedModel.m; sourceTree = "<group>"; };
+		D3A8675916FC8AC600BE3B96 /* RNSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSettings.h; sourceTree = "<group>"; };
+		D3A8675A16FC8AC600BE3B96 /* RNSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSettings.m; sourceTree = "<group>"; };
 		D3D4E7FA16D15FB50082C1A9 /* RSSNotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSNotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D4E7FE16D15FB50082C1A9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D3D4E80116D15FB50082C1A9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -212,6 +215,8 @@
 				D3D4E81316D15FB50082C1A9 /* MainMenu.xib */,
 				D356DA0016DAFA7C0083C48B /* RNRSSEntry.h */,
 				D356DA0116DAFA7C0083C48B /* RNRSSEntry.m */,
+				D3A8675916FC8AC600BE3B96 /* RNSettings.h */,
+				D3A8675A16FC8AC600BE3B96 /* RNSettings.m */,
 				D367A03416E2E5FF00B1079A /* RNSortedEntries.h */,
 				D367A03516E2E5FF00B1079A /* RNSortedEntries.m */,
 				D3D4E80516D15FB50082C1A9 /* Supporting Files */,
@@ -386,6 +391,7 @@
 				D3DA914716DAC06600EC7DD2 /* GDataXMLElement-Extras.m in Sources */,
 				D356DA0216DAFA7C0083C48B /* RNRSSEntry.m in Sources */,
 				D367A03616E2E5FF00B1079A /* RNSortedEntries.m in Sources */,
+				D3A8675B16FC8AC600BE3B96 /* RNSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

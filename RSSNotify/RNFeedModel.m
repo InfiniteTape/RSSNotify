@@ -124,7 +124,7 @@
         else
         {
             NSMutableArray *entries = [NSMutableArray array];
-            RNSortedEntries *sorted = [[RNSortedEntries alloc] initWithMaxSize:5];
+            RNSortedEntries *sorted = [[RNSortedEntries alloc] initWithMaxSize:(uint)_maxEntries];
             [self parseFeed:doc.rootElement entries:entries];
             for(RNRSSEntry *entry in entries)
             {

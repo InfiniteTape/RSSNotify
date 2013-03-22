@@ -102,7 +102,8 @@
 
 -(void)updateText:(NSString *)text
 {
-    [demoTextView setString:[[NSString alloc] initWithFormat:@"%@\n%@", demoTextView.string, text]];
+    [demoTextView setString:[[NSString alloc] initWithString:text]];
+    //[demoTextView setString:[[NSString alloc] initWithFormat:@"%@\n%@", demoTextView.string, text]];
 }
 
 @end

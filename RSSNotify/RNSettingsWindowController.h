@@ -9,9 +9,12 @@
 #import <Cocoa/Cocoa.h>
 
 @interface RNSettingsWindowController : NSWindowController <NSWindowDelegate, NSTableViewDataSource, NSTableViewDelegate>
-@property (strong, atomic) NSArray *feedList;
+@property (strong, atomic) NSMutableArray *feedList;
 @property (weak) IBOutlet NSTextField *refreshTimeTextField;
 - (IBAction)okButtonPressed:(id)sender;
 @property (weak) IBOutlet NSTextField *maxEntriesTextField;
 - (IBAction)cancelButtonClicked:(id)sender;
+- (IBAction)addButtonClicked:(id)sender;
+- (IBAction)removeButtonClicked:(id)sender;
+@property (weak) IBOutlet NSTableView *feedTableView;
 @end

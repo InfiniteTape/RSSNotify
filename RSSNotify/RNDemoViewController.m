@@ -48,7 +48,7 @@
     // Temporary feed list until the settings dialog is off the ground
     if([settings.feedList count] == 0) {
         [settings.feedList addObject:@"http://feeds.gawker.com/Gizmodo/full"];
-        //[settings.feedList addObject:@"http://feeds.gawker.com/Kotaku/full"];
+        [settings.feedList addObject:@"http://feeds.gawker.com/Kotaku/full"];
     }
     // TODO: once the refresh time comes only from the settings, just call updateFeeds... here.
     model.feeds = settings.feedList;
@@ -79,7 +79,7 @@
 
 - (IBAction)settingsButtonClicked:(id)sender {
     RNSettingsWindowController *settingsWindow = [[RNSettingsWindowController alloc] initWithWindowNibName:@"RNSettingsWindowController"];
-    settingsWindow.feedList = [model.feeds copy];
+    settingsWindow.feedList = [[NSMutableArray alloc] initWithArray:model.feeds copyItems:YES];
     NSModalSession session = [[NSApplication sharedApplication] beginModalSessionForWindow: settingsWindow.window];
     [settingsWindow.refreshTimeTextField setIntegerValue:self.refreshTimeTextField.integerValue];
     [settingsWindow.maxEntriesTextField setIntegerValue:model.maxEntries];
@@ -102,8 +102,8 @@
 
 -(void)updateText:(NSString *)text
 {
-    [demoTextView setString:[[NSString alloc] initWithString:text]];
-    //[demoTextView setString:[[NSString alloc] initWithFormat:@"%@\n%@", demoTextView.string, text]];
+    //[demoTextView setString:[[NSString alloc] initWithString:text]];
+    [demoTextView setString:[[NSString alloc] initWithFormat:@"%@\n%@", demoTextView.string, text]];
 }
 
 @end

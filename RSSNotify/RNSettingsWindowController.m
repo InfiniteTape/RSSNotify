@@ -72,4 +72,12 @@
 - (IBAction)cancelButtonClicked:(id)sender {
     [[NSApplication sharedApplication] stopModalWithCode:0];
 }
+
+- (IBAction)addButtonClicked:(id)sender {
+}
+
+- (IBAction)removeButtonClicked:(id)sender {
+    [_feedList removeObjectAtIndex:_feedTableView.selectedRow];
+    [_feedTableView reloadData];
+}
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "RNSettingsWindowController.h"
+#import "RNAddFeedWindowController.h"
 
 @interface RNSettingsWindowController ()
 
@@ -74,6 +75,18 @@
 }
 
 - (IBAction)addButtonClicked:(id)sender {
+    RNAddFeedWindowController *addWindow = [[RNAddFeedWindowController alloc] initWithWindowNibName:@"RNAddFeedWindowController"];
+    
+    NSModalSession session = [[NSApplication sharedApplication] beginModalSessionForWindow: addWindow.window];
+    
+    NSInteger result = [[NSApplication sharedApplication]runModalForWindow:addWindow.window];
+    if(result) {
+        if(![_feedList containsObject:addWindow.feedTextField.stringValue]) {
+            [_feedList addObject:addWindow.feedTextField.stringValue];
+            [_feedTableView reloadData];
+        }
+    }
+    [[NSApplication sharedApplication] endModalSession:session];
 }
 
 - (IBAction)removeButtonClicked:(id)sender {

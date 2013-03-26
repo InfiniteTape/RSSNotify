@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D305094416FFDD1C002CC197 /* RNAddFeedWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D305094216FFDD1C002CC197 /* RNAddFeedWindowController.m */; };
 		D305094516FFDD1C002CC197 /* RNAddFeedWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D305094316FFDD1C002CC197 /* RNAddFeedWindowController.xib */; };
+		D33A0B00170137E400CDA151 /* RNMenulet.m in Sources */ = {isa = PBXBuildFile; fileRef = D33A0AFF170137E400CDA151 /* RNMenulet.m */; };
 		D356DA0216DAFA7C0083C48B /* RNRSSEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = D356DA0116DAFA7C0083C48B /* RNRSSEntry.m */; };
 		D367A03616E2E5FF00B1079A /* RNSortedEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = D367A03516E2E5FF00B1079A /* RNSortedEntries.m */; };
 		D39F0B1416DA72CA00C75F96 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = D39F0B0116DA72CA00C75F96 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -56,6 +57,8 @@
 		D305094116FFDD1C002CC197 /* RNAddFeedWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAddFeedWindowController.h; sourceTree = "<group>"; };
 		D305094216FFDD1C002CC197 /* RNAddFeedWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNAddFeedWindowController.m; sourceTree = "<group>"; };
 		D305094316FFDD1C002CC197 /* RNAddFeedWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RNAddFeedWindowController.xib; sourceTree = "<group>"; };
+		D33A0AFE170137E400CDA151 /* RNMenulet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMenulet.h; sourceTree = "<group>"; };
+		D33A0AFF170137E400CDA151 /* RNMenulet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNMenulet.m; sourceTree = "<group>"; };
 		D356DA0016DAFA7C0083C48B /* RNRSSEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNRSSEntry.h; sourceTree = "<group>"; };
 		D356DA0116DAFA7C0083C48B /* RNRSSEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNRSSEntry.m; sourceTree = "<group>"; };
 		D367A03416E2E5FF00B1079A /* RNSortedEntries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSortedEntries.h; sourceTree = "<group>"; };
@@ -215,6 +218,7 @@
 			children = (
 				D39F0AFC16DA72CA00C75F96 /* ASIHTTPRequest */,
 				D3DA913F16DABDB100EC7DD2 /* GDataXML */,
+				D3D4E81316D15FB50082C1A9 /* MainMenu.xib */,
 				D305094116FFDD1C002CC197 /* RNAddFeedWindowController.h */,
 				D305094216FFDD1C002CC197 /* RNAddFeedWindowController.m */,
 				D305094316FFDD1C002CC197 /* RNAddFeedWindowController.xib */,
@@ -225,7 +229,8 @@
 				D3D4E83516D161460082C1A9 /* RNDemoViewController.h */,
 				D3D4E83616D161460082C1A9 /* RNDemoViewController.m */,
 				D3D4E83716D161470082C1A9 /* RNDemoViewController.xib */,
-				D3D4E81316D15FB50082C1A9 /* MainMenu.xib */,
+				D33A0AFE170137E400CDA151 /* RNMenulet.h */,
+				D33A0AFF170137E400CDA151 /* RNMenulet.m */,
 				D356DA0016DAFA7C0083C48B /* RNRSSEntry.h */,
 				D356DA0116DAFA7C0083C48B /* RNRSSEntry.m */,
 				D3A8675916FC8AC600BE3B96 /* RNSettings.h */,
@@ -412,6 +417,7 @@
 				D3A8675B16FC8AC600BE3B96 /* RNSettings.m in Sources */,
 				D3A8675F16FCBD8F00BE3B96 /* RNSettingsWindowController.m in Sources */,
 				D305094416FFDD1C002CC197 /* RNAddFeedWindowController.m in Sources */,
+				D33A0B00170137E400CDA151 /* RNMenulet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

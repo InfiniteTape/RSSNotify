@@ -12,4 +12,6 @@
     NSStatusItem *statusItem;
 }
 
+@property (weak) IBOutlet NSMenu *statusItemMenu;
+
 @end

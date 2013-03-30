@@ -16,6 +16,7 @@
     [statusItem setTitle:@"0.0.0.0"];
     [statusItem setEnabled:YES];
     [statusItem setToolTip:@"RNMenulet"];
+    [statusItem setMenu:_statusItemMenu];
     
     //[statusItem setAction:@selector(updateIPAddress:)];
     //[statusItem setTarget:self];

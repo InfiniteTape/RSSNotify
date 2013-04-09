@@ -7,6 +7,8 @@
 //
 
 #import "RNMenulet.h"
+#import "RNDemoViewController.h"
+#import "RNAppDelegate.h"
 
 @implementation RNMenulet
 
@@ -17,11 +19,16 @@
     [statusItem setEnabled:YES];
     [statusItem setToolTip:@"RNMenulet"];
     [statusItem setMenu:_statusItemMenu];
-    
-    //[statusItem setAction:@selector(updateIPAddress:)];
-    //[statusItem setTarget:self];
 }
 
 - (IBAction)settingsMenuItemClicked:(id)sender {
+    RNAppDelegate *delegate = (RNAppDelegate *)[NSApplication sharedApplication].delegate;
+    [delegate.demoViewController settingsButtonClicked:sender];
+}
+
+- (IBAction)refreshMenuItemClicked:(id)sender {
+    RNAppDelegate *delegate = (RNAppDelegate *)[NSApplication sharedApplication].delegate;
+    [delegate.demoViewController updateFeeds];
+
 }
 @end

@@ -14,5 +14,7 @@
 @property (nonatomic, retain) IBOutlet NSButton *demoButton;
 -(IBAction)demoButtonClicked:(id)sender;
 -(IBAction)settingsButtonClicked:(id)sender;
+-(void) updateFeeds;
 -(void) updateText:(NSString *)text;
++(RNDemoViewController *)sharedInstance;
 @end

@@ -10,7 +10,7 @@
 #include "RNDemoViewController.h"
 
 @interface RNAppDelegate()
-@property (nonatomic, strong) IBOutlet RNDemoViewController *demoViewController;
+//@property (nonatomic, strong) IBOutlet RNDemoViewController *demoViewController;
 @end
 
 @implementation RNAppDelegate

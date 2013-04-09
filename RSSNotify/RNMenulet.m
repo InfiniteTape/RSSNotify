@@ -22,4 +22,6 @@
     //[statusItem setTarget:self];
 }
 
+- (IBAction)settingsMenuItemClicked:(id)sender {
+}
 @end

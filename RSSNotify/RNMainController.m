@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 Brian Rogers. All rights reserved.
 //
 
-#import "RNDemoViewController.h"
+#import "RNMainController.h"
 #import "RNFeedModel.h"
 #import "RNSettings.h"
 #import "RNSettingsWindowController.h"
 
-@interface RNDemoViewController ()
+@interface RNMainController ()
 {
     RNFeedModel *model;
     RNSettings *settings;
@@ -20,16 +20,26 @@
 }
 @end
 
-@implementation RNDemoViewController
+@implementation RNMainController
 
 @synthesize demoTextView;
 @synthesize demoButton;
 
-+(RNDemoViewController *)sharedInstance {
-    return (RNDemoViewController *) self;
++(RNMainController *)sharedInstance {
+    return (RNMainController *) self;
 }
 
-- (RNDemoViewController *)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (RNMainController *)init {
+    self = [super init];
+    if (self) {
+        model = [[RNFeedModel alloc] init];
+        model.viewController = self;
+        [self loadSettings];
+    }
+    return self;
+}
+
+/*- (RNMainController *)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -37,9 +47,8 @@
         model.viewController = self;
         [self loadSettings];
     }
-    
     return self;
-}
+}*/
 
 - (void)loadView {
     [super loadView];
@@ -101,7 +110,8 @@
 -(void)updateText:(NSString *)text
 {
     //[demoTextView setString:[[NSString alloc] initWithString:text]];
-    [demoTextView setString:[[NSString alloc] initWithFormat:@"%@\n%@", demoTextView.string, text]];
+    //[demoTextView setString:[[NSString alloc] initWithFormat:@"%@\n%@", demoTextView.string, text]];
+    NSLog(@"%@\n%@", demoTextView.string, text);
 }
 
 @end

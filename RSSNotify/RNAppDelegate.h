@@ -7,12 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "RNDemoViewController.h"
+#import "RNMainController.h"
 
 
 @interface RNAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
-@property (nonatomic, strong) RNDemoViewController *demoViewController;
+@property (nonatomic, strong) RNMainController *mainController;
 
 @end

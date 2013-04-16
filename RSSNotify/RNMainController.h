@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface RNDemoViewController : NSViewController
+@interface RNMainController : NSViewController
 
 @property (nonatomic, retain) IBOutlet NSTextView *demoTextView;
 @property (nonatomic, retain) IBOutlet NSButton *demoButton;
@@ -16,5 +16,5 @@
 -(IBAction)settingsButtonClicked:(id)sender;
 -(void) updateFeeds;
 -(void) updateText:(NSString *)text;
-+(RNDemoViewController *)sharedInstance;
++(RNMainController *)sharedInstance;
 @end

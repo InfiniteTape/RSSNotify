@@ -7,7 +7,7 @@
 //
 
 #import "RNAppDelegate.h"
-#include "RNDemoViewController.h"
+#include "RNMainController.h"
 
 @interface RNAppDelegate()
 //@property (nonatomic, strong) IBOutlet RNDemoViewController *demoViewController;
@@ -17,9 +17,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    self.demoViewController = [[RNDemoViewController alloc] initWithNibName:@"RNDemoViewController" bundle:nil];
-    [self.window.contentView addSubview:self.demoViewController.view];
-    self.demoViewController.view.frame = ((NSView*)self.window.contentView).bounds;
+    /*self.mainController = [[RNMainController alloc] initWithNibName:@"RNMainController" bundle:nil];
+    [self.window.contentView addSubview:self.mainController.view];
+    self.mainController.view.frame = ((NSView*)self.window.contentView).bounds;*/
+    self.mainController = [[RNMainController alloc] init];
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "RNMenulet.h"
-#import "RNDemoViewController.h"
+#import "RNMainController.h"
 #import "RNAppDelegate.h"
 
 @implementation RNMenulet
@@ -23,12 +23,15 @@
 
 - (IBAction)settingsMenuItemClicked:(id)sender {
     RNAppDelegate *delegate = (RNAppDelegate *)[NSApplication sharedApplication].delegate;
-    [delegate.demoViewController settingsButtonClicked:sender];
+    [delegate.mainController settingsButtonClicked:sender];
 }
 
 - (IBAction)refreshMenuItemClicked:(id)sender {
     RNAppDelegate *delegate = (RNAppDelegate *)[NSApplication sharedApplication].delegate;
-    [delegate.demoViewController updateFeeds];
+    [delegate.mainController updateFeeds];
 
+}
+
+- (IBAction)debugConsoleMenuItemClicked:(id)sender {
 }
 @end

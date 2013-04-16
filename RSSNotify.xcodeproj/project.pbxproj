@@ -36,8 +36,8 @@
 		D3D4E81E16D15FB50082C1A9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D4E7FE16D15FB50082C1A9 /* Cocoa.framework */; };
 		D3D4E82616D15FB50082C1A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3D4E82416D15FB50082C1A9 /* InfoPlist.strings */; };
 		D3D4E82916D15FB50082C1A9 /* RSSNotifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E82816D15FB50082C1A9 /* RSSNotifyTests.m */; };
-		D3D4E83816D161470082C1A9 /* RNDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E83616D161460082C1A9 /* RNDemoViewController.m */; };
-		D3D4E83916D161470082C1A9 /* RNDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D4E83716D161470082C1A9 /* RNDemoViewController.xib */; };
+		D3D4E83816D161470082C1A9 /* RNMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E83616D161460082C1A9 /* RNMainController.m */; };
+		D3D4E83916D161470082C1A9 /* RNMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D4E83716D161470082C1A9 /* RNMainController.xib */; };
 		D3DA914216DABDB100EC7DD2 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DA914116DABDB100EC7DD2 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D3DA914416DABE2500EC7DD2 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DA914316DABE2500EC7DD2 /* libxml2.dylib */; };
 		D3DA914716DAC06600EC7DD2 /* GDataXMLElement-Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DA914616DAC06600EC7DD2 /* GDataXMLElement-Extras.m */; };
@@ -110,9 +110,9 @@
 		D3D4E82516D15FB50082C1A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D3D4E82716D15FB50082C1A9 /* RSSNotifyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSSNotifyTests.h; sourceTree = "<group>"; };
 		D3D4E82816D15FB50082C1A9 /* RSSNotifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSSNotifyTests.m; sourceTree = "<group>"; };
-		D3D4E83516D161460082C1A9 /* RNDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNDemoViewController.h; sourceTree = "<group>"; };
-		D3D4E83616D161460082C1A9 /* RNDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNDemoViewController.m; sourceTree = "<group>"; };
-		D3D4E83716D161470082C1A9 /* RNDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RNDemoViewController.xib; sourceTree = "<group>"; };
+		D3D4E83516D161460082C1A9 /* RNMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMainController.h; sourceTree = "<group>"; };
+		D3D4E83616D161460082C1A9 /* RNMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNMainController.m; sourceTree = "<group>"; };
+		D3D4E83716D161470082C1A9 /* RNMainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RNMainController.xib; sourceTree = "<group>"; };
 		D3DA914016DABDB100EC7DD2 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		D3DA914116DABDB100EC7DD2 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		D3DA914316DABE2500EC7DD2 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -226,9 +226,9 @@
 				D3D4E81116D15FB50082C1A9 /* RNAppDelegate.m */,
 				D39F0B2616DA783E00C75F96 /* RNFeedModel.h */,
 				D39F0B2716DA783E00C75F96 /* RNFeedModel.m */,
-				D3D4E83516D161460082C1A9 /* RNDemoViewController.h */,
-				D3D4E83616D161460082C1A9 /* RNDemoViewController.m */,
-				D3D4E83716D161470082C1A9 /* RNDemoViewController.xib */,
+				D3D4E83516D161460082C1A9 /* RNMainController.h */,
+				D3D4E83616D161460082C1A9 /* RNMainController.m */,
+				D3D4E83716D161470082C1A9 /* RNMainController.xib */,
 				D33A0AFE170137E400CDA151 /* RNMenulet.h */,
 				D33A0AFF170137E400CDA151 /* RNMenulet.m */,
 				D356DA0016DAFA7C0083C48B /* RNRSSEntry.h */,
@@ -362,7 +362,7 @@
 				D3D4E80916D15FB50082C1A9 /* InfoPlist.strings in Resources */,
 				D3D4E80F16D15FB50082C1A9 /* Credits.rtf in Resources */,
 				D3D4E81516D15FB50082C1A9 /* MainMenu.xib in Resources */,
-				D3D4E83916D161470082C1A9 /* RNDemoViewController.xib in Resources */,
+				D3D4E83916D161470082C1A9 /* RNMainController.xib in Resources */,
 				D3A8676016FCBD8F00BE3B96 /* RNSettingsWindowController.xib in Resources */,
 				D305094516FFDD1C002CC197 /* RNAddFeedWindowController.xib in Resources */,
 			);
@@ -401,7 +401,7 @@
 			files = (
 				D3D4E80B16D15FB50082C1A9 /* main.m in Sources */,
 				D3D4E81216D15FB50082C1A9 /* RNAppDelegate.m in Sources */,
-				D3D4E83816D161470082C1A9 /* RNDemoViewController.m in Sources */,
+				D3D4E83816D161470082C1A9 /* RNMainController.m in Sources */,
 				D39F0B1416DA72CA00C75F96 /* ASIDataCompressor.m in Sources */,
 				D39F0B1516DA72CA00C75F96 /* ASIDataDecompressor.m in Sources */,
 				D39F0B1616DA72CA00C75F96 /* ASIDownloadCache.m in Sources */,

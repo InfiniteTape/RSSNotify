@@ -123,31 +123,57 @@
         }
         else
         {
-            NSMutableArray *entries = [NSMutableArray array];
-            RNSortedEntries *sorted = [[RNSortedEntries alloc] initWithMaxSize:(uint)_maxEntries];
-            [self parseFeed:doc.rootElement entries:entries];
-            for(RNRSSEntry *entry in entries)
-            {
-                [sorted addEntry:entry];
-            }
-            
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                NSMutableString *buildTitles = [[NSMutableString alloc]init];
-                [buildTitles appendFormat:@"%@\n", [NSDate date]];
-                uint i;
-                for(i=0; i<[sorted getMaxSize]; i++)
-                {
-                    RNRSSEntry *entry = [sorted getEntryAtIndex:i];
-                    [buildTitles appendFormat:@"%@ %@\n", entry.articleTitle, entry.articleDate];
-                }
-                if(viewController)
-                    [viewController updateText:buildTitles];
-            }];
+            [self parseAndSort:doc];
         }
         
     }];
     
     
+}
+
+-(void)testWithFile:(NSString *)filePath
+{
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    [queue addOperationWithBlock:^{
+        NSError *error;
+        GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:data
+                                                               options:0
+                                                                 error:&error];
+        if(doc==nil)
+        {
+            NSLog(@"Failed to parse %@", filePath);
+        }
+        else
+        {
+            [self parseAndSort:doc];
+        }
+        
+    }];
+     
+}
+
+-(void)parseAndSort:(GDataXMLDocument *)doc
+{
+    NSMutableArray *entries = [NSMutableArray array];
+    RNSortedEntries *sorted = [[RNSortedEntries alloc] initWithMaxSize:(uint)_maxEntries];
+    [self parseFeed:doc.rootElement entries:entries];
+    for(RNRSSEntry *entry in entries)
+    {
+        [sorted addEntry:entry];
+    }
+    
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        NSMutableString *buildTitles = [[NSMutableString alloc]init];
+        [buildTitles appendFormat:@"%@\n", [NSDate date]];
+        uint i;
+        for(i=0; i<[sorted getMaxSize]; i++)
+        {
+            RNRSSEntry *entry = [sorted getEntryAtIndex:i];
+            [buildTitles appendFormat:@"%@ %@\n", entry.articleTitle, entry.articleDate];
+        }
+        if(viewController)
+            [viewController updateText:buildTitles];
+    }];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request

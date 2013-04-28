@@ -104,4 +104,9 @@
     [demoTextView setString:[[NSString alloc] initWithFormat:@"%@\n%@", demoTextView.string, text]];
 }
 
+-(void)runFileTest
+{
+    [model testWithFile:@"Engadget.xml"];
+}
+
 @end

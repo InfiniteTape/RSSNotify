@@ -15,5 +15,6 @@
 @property (weak) IBOutlet NSMenu *statusItemMenu;
 - (IBAction)settingsMenuItemClicked:(id)sender;
 - (IBAction)refreshMenuItemClicked:(id)sender;
+- (IBAction)fileTestMenuItemClicked:(id)sender;
 
 @end

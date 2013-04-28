@@ -18,5 +18,6 @@
 @property NSUInteger maxEntries;
 
 - (void)refresh;
+-(void)testWithFile:(NSString *)filePath;
 
 @end

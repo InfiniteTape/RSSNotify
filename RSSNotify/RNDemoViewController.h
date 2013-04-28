@@ -16,5 +16,6 @@
 -(IBAction)settingsButtonClicked:(id)sender;
 -(void) updateFeeds;
 -(void) updateText:(NSString *)text;
+-(void) runFileTest;
 +(RNDemoViewController *)sharedInstance;
 @end

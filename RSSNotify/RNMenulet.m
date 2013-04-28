@@ -31,4 +31,9 @@
     [delegate.demoViewController updateFeeds];
 
 }
+
+- (IBAction)fileTestMenuItemClicked:(id)sender {
+    RNAppDelegate *delegate = (RNAppDelegate *)[NSApplication sharedApplication].delegate;
+    [delegate.demoViewController runFileTest];
+}
 @end
